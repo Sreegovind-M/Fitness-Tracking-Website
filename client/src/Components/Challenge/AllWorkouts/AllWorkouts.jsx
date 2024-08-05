@@ -5,7 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import axios from "axios";
-import "../Workout/Workout.css";
+import "../Workout/Workout.css"
 
 const Workout = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -24,7 +24,7 @@ const Workout = () => {
 
   return (
     <div className="workout-section">
-      {workouts.slice(0, 3).map((workout, index) => (
+      {workouts.map((workout, index) => (
         <Accordion key={index} defaultExpanded={index == 0}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}

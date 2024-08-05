@@ -1,0 +1,38 @@
+.dashboard-section{
+    padding: 5vh 0;
+    margin: 0 auto;
+    max-width: 90%;
+    text-transform: uppercase;
+}
+
+.dashboard-header{
+    text-align: center;
+    font-size: 3vh;
+}
+
+.dashboard-boxes-section{
+    padding: 3vh 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dashboard-card {
+    border: 1px solid #fb5607;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    width: 400px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    background-color: #cccccc;
+    padding: 4vh;
+    cursor: pointer;
+  }
+  
+  .dashboard-card:hover {
+    background-color: #fb5607;
+    color: white;
+  }
+  

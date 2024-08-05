@@ -36,6 +36,9 @@ const MainChallenge = () => {
   const toWorkout = () => {
     navi("/workout");
   }
+  const toAllWorkout = () => {
+    navi("/allWorkouts");
+  }
 
   return (
     <div className="main-challenge-bg">
@@ -66,7 +69,7 @@ const MainChallenge = () => {
             <div className="main-challenge-box" onClick={toWorkout}>
               <h2>Today's Workouts</h2>
             </div>
-            <div className="main-challenge-box">
+            <div className="main-challenge-box" onClick={toAllWorkout}>
               <h2>Workout List</h2>
             </div>
           </div>

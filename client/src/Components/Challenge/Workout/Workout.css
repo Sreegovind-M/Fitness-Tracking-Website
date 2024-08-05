@@ -1,0 +1,18 @@
+.workout-section{
+    margin: 0 auto;
+    max-width: 90%;
+    text-transform: uppercase;
+    padding: 7vh 0;
+}
+.exercise-body{
+    padding: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: none;
+    flex-wrap: wrap;
+}
+.exercise-descrip {
+    width: 40%;
+}
+
+
