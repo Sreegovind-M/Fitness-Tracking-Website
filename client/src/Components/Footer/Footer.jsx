@@ -1,8 +1,13 @@
 import React from "react";
 import "../Footer/Footer.css";
 import logo from "../../assets/Images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navi = useNavigate();
+  const handleNavigation = (path) => {
+    navi(path);
+  };
   return (
     <div>
       <div className="footer-section">
@@ -13,23 +18,13 @@ const Footer = () => {
           </div>
           <div className="footer-nav">
             <ul>
-              <a href="">
-                <li>Challenges</li>
-              </a>
-              <a href="">
-                <li>Dashboard</li>
-              </a>
-              <a href="">
-                <li>Shops</li>
-              </a>
-              <a href="">
-                <li>Nutrition</li>
-              </a>
-              <a href="">
-                <li>Profile</li>
-              </a>
+              <li onClick={() => handleNavigation("/challenge")}>Challenges</li>
+                <li onClick={() => handleNavigation("/dashboard")}>Dashboard</li>
+                <li onClick={() => handleNavigation("/shopsHome")}>Shops</li>
+                <li onClick={() => handleNavigation("/nutrition")}>Nutrition</li>
+                <li onClick={() => handleNavigation("/profile")}>Profile</li>
             </ul>
-            <h1>You are in control</h1>
+            <h1>Stronger Every Day</h1>
           </div>
           <div className="footer-soc-link">
             <ul>
@@ -43,7 +38,7 @@ const Footer = () => {
                 <li>Facebook</li>
               </a>
             </ul>
-            <h1>You are in control</h1>
+            <h1>Push yourself no one else will</h1>
           </div>
         </div>
       </div>

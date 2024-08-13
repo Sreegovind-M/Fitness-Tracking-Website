@@ -34,6 +34,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
+  transition: all 0.5s ease;
+}
+.pt-box:hover{
+  transform: scale(1.05);
 }
 
 .pt-content-head {

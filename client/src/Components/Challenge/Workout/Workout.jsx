@@ -17,13 +17,22 @@ const Workout = () => {
         "x-rapidapi-host": "exercisedb.p.rapidapi.com",
         "x-rapidapi-key": "05651d711fmsh4a52af44fb02c24p159c88jsne95863eb36cb",
       },
-    }).then((res) => setWorkouts(res.data));
+    }).then((res) => setWorkouts(shuffleArray(res.data).slice(0, 3)));
   }, []);
 
-  console.log(workouts);
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
   return (
     <div className="workout-section">
+      <div className="workout-header">
+        <h1>Today's Workouts</h1>
+      </div>
       {workouts.slice(0, 3).map((workout, index) => (
         <Accordion key={index} defaultExpanded={index == 0}>
           <AccordionSummary
@@ -53,19 +62,15 @@ const Workout = () => {
                 </h2>
                 <h2>Secondary Muscles</h2>
                 <ul>
-                    {
-                        workout.secondaryMuscles.map((muscle, index) => (
-                          <li key={index}>{muscle}</li>  
-                        ))
-                    }
+                  {workout.secondaryMuscles.map((muscle, index) => (
+                    <li key={index}>{muscle}</li>
+                  ))}
                 </ul>
                 <h2>Instructions</h2>
                 <ul>
-                    {
-                        workout.instructions.map((ins, index)=>(
-                            <li key={index}>{ins}</li>
-                        ))
-                    }
+                  {workout.instructions.map((ins, index) => (
+                    <li key={index}>{ins}</li>
+                  ))}
                 </ul>
               </div>
             </Typography>

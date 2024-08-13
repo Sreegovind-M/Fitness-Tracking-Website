@@ -62,7 +62,7 @@ const PersonalTraining = () => {
                 <div className="pt-content-head">
                   <h3>[3]</h3>
                   <br />
-                  <h2>middle</h2>
+                  <h2>high</h2>
                 </div>
                 <div className="pt-content-descrip">
                   <ul>
