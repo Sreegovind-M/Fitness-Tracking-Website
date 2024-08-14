@@ -1,6 +1,6 @@
 import express from "express";
-import { BalancedDietget } from "../../controllers/Recipe/BalancedDiet/BalancedDietget.js";
-import { BalancedDietpost } from "../../controllers/Recipe/BalancedDiet/BalancedDietpost.js";
+import { BalancedDietget } from "../../Controllers/Recipe/BalancedDiet/BalancedDietget.js";
+import { BalancedDietpost } from "../../Controllers/Recipe/BalancedDiet/BalancedDietpost.js";
 
 const router = express.Router();
 

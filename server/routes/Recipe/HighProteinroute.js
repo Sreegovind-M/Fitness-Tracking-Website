@@ -1,6 +1,6 @@
 import express from "express";
-import { HighProteinget } from "../../controllers/Recipe/HighProtein/HighProteinget.js";
-import { HighProteinpost } from "../../controllers/Recipe/HighProtein/HighProteinpost.js";
+import { HighProteinget } from "../../Controllers/Recipe/HighProtein/HighProteinget.js";
+import { HighProteinpost } from "../../Controllers/Recipe/HighProtein/HighProteinpost.js";
 import { HighProteinDelete } from "../../Controllers/Recipe/HighProtein/HighProteindelete.js";
 
 const router = express.Router();

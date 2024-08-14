@@ -1,6 +1,6 @@
 import express from "express";
-import { LowCarbget } from "../../controllers/Recipe/LowCarb/LowCarbget.js";
-import { LowCarbpost } from "../../controllers/Recipe/LowCarb/LowCarbpost.js";
+import { LowCarbget } from "../../Controllers/Recipe/LowCarb/LowCarbget.js";
+import { LowCarbpost } from "../../Controllers/Recipe/LowCarb/LowCarbpost.js";
 
 const router = express.Router();
 
