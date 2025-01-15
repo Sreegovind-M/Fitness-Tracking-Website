@@ -24,6 +24,7 @@ import { MyContextProvider } from "./Components/DetailsContext/MyContext";
 import ChallengeManagement from "./Components/Dashboard/ChallengeManagement/ChallengeManagement";
 import Feedback from "./Components/Dashboard/Feedback/Feedback";
 import PaymentForm from "./Components/PaymentForm/PaymentForm";
+import CalorieTracker from "./Components/Dashboard/CalorieTracker/CalorieTracker";
 
 const AppContent = () => {
   const location = useLocation();
@@ -60,6 +61,7 @@ const AppContent = () => {
           ></Route>
           <Route path="/feedback" element={<Feedback/>}></Route>
           <Route path="/payment" element={<PaymentForm/>}></Route>
+          <Route path="/calorietracker" element={<CalorieTracker/>}></Route>
         </Routes>
         {!isLoginPage && !isSignUpPage && <Footer />}
       </MyContextProvider>

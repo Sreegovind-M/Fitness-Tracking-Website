@@ -7,6 +7,7 @@ import BalancedDietRouter from "../server/routes/Recipe/BalancedDietroute.js";
 import HighProteinRouter from "../server/routes/Recipe/HighProteinroute.js";
 import LowCarbRouter from "../server/routes/Recipe/LowCarbroute.js";
 import loginRoute from "../server/routes/loginRoute.js";
+import shopRouter from "../server/routes/shopRoute.js";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use("/balanceddiet", BalancedDietRouter);
 app.use("/highprotein", HighProteinRouter);
 app.use("/lowcarb", LowCarbRouter);
 app.use("/login", loginRoute);
+app.use("/shop", shopRouter);
 
 app.listen(3001);
 

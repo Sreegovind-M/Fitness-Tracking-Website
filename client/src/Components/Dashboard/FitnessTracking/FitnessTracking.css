@@ -1,26 +1,37 @@
-
 .fitness-tracking-section {
   padding: 5vh 0;
+  background: linear-gradient(135deg, #f3f4f7, #e3e7ef);
 }
 
 .fitness-tracking-container {
   margin: 0 auto;
   max-width: 90%;
   text-transform: uppercase;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .fitness-tracking-heading-section {
   display: flex;
   flex-direction: column;
 }
+
 .fitness-tracking-heading-section h1 {
   text-align: center;
+  font-size: 2.5rem;
+  color: #3a3a3a;
+  margin-bottom: 1vh;
 }
+
 .fitness-tracking-top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2vh 0;
 }
+
 .fitness-tracking-top-header-right {
   display: flex;
   align-items: center;
@@ -32,53 +43,55 @@
   gap: 2vh;
   padding: 3vh 0;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .fitness-tracking-box {
-  width: fit-content;
   padding: 2vh;
   color: #1a1a1a;
-  transition: all 0.5s;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   width: 250px;
-  height: fit-content;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
+
+.fitness-tracking-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
 .box-1 {
-  background-color: #eaf0e0;
+  background: linear-gradient(135deg, #c3f8a3, #eaf0e0);
 }
+
 .box-2 {
-  background-color: #e9f1f7;
+  background: linear-gradient(135deg, #a3d3f8, #e9f1f7);
 }
+
 .box-3 {
-  background-color: #f8f8f8;
+  background: linear-gradient(135deg, #f8e8a3, #f8f8f8);
 }
+
 .box-4 {
-  background-color: #cbe6fd;
-}
-.fitness-tracking-box > * {
-  margin-bottom: 3vh;
-}
-.fitness-tracking-box > *:last-child {
-  margin-bottom: 0;
+  background: linear-gradient(135deg, #a3e0ff, #cbe6fd);
 }
 
 .fitness-tracking-box-top-img {
   display: flex;
   justify-content: space-between;
 }
-.ftb-top-img-left {
-  background-color: white;
-  padding: 5px;
-}
+
+.ftb-top-img-left,
 .ftb-top-img-right {
-  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.fitness-tracking-box:hover {
-  transform: scale(1.05);
-}
 .fitness-tracking-right-box-section {
-  margin-left: 55px;
   display: flex;
   gap: 2vh;
   padding: 3vh 0;
@@ -87,30 +100,19 @@
 }
 
 .ftb-right-box {
-  background-color: #f8f8f8;
-  padding: 1vh;
+  padding: 1.5vh;
   color: #1a1a1a;
-  transition: all 0.5s;
-  cursor: pointer;
   text-align: center;
   width: 250px;
   border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .ftb-right-box:hover {
-  transform: scale(1.05);
-}
-
-.boxr1 {
-  background-color: #eaf0e0;
-}
-
-.boxr2 {
-  background-color: #e9f1f7;
-}
-
-.boxr3 {
-  background-color: #cbe6fd;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .fitness-tracking-second-box-section {
@@ -125,42 +127,60 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 4vh;
+  justify-content: center;
 }
 
 .ftsl-calorie-box {
   display: flex;
   gap: 2vh;
   align-items: center;
+  background: #fff;
+  padding: 2vh;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
-.ftsl-calorie-descrip > * {
-  margin-bottom: 8px;
+
+.ftsl-calorie-box:hover {
+  transform: translateY(-5px);
 }
 
 .fts-nav-top {
   padding: 3vh;
-  background-color: #e9f1f7;
+  background: #e9f1f7;
   margin-bottom: 10px;
   margin-left: 8vh;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .fts-nav-top:hover {
   transform: scale(1.05);
+  background: #d2e9f3;
 }
 
+.fitness-tracking-activity-section {
+  margin-top: 4vh;
+}
+
+.fitness-tracking-activity-section h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
 
 @media (max-width: 599px) {
-  .fitness-tracking-activity-section{
+  .fitness-tracking-activity-section {
     display: none;
   }
-  .fitness-tracking-second-left-box-section{
+  .fitness-tracking-second-left-box-section {
     justify-content: center;
   }
-  .fitness-tracking-first-box-section{
+  .fitness-tracking-first-box-section {
     justify-content: center;
   }
-  .fitness-tracking-right-box-section{
+  .fitness-tracking-right-box-section {
     margin: 0;
   }
 }

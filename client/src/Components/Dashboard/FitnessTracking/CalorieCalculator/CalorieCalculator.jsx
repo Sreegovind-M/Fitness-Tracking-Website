@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../CalorieCalculator/CalorieCalculator.css";
+import { MyContext } from "../../../DetailsContext/MyContext";
 
 const CalorieCalculator = () => {
   const [gender, setGender] = useState("male");
@@ -31,6 +32,8 @@ const CalorieCalculator = () => {
 
     const totalCalories = bmr * activityFactors[activityLevel];
     setCalories(totalCalories.toFixed(0));
+    localStorage.setItem("totalCalories", totalCalories.toFixed(0));
+    console.log(localStorage.getItem("totalCalories"));
   };
   const resetForm = () => {
     setGender("male");

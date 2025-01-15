@@ -5,7 +5,7 @@ import { deleteData } from "../Controllers/Challenges/challengeDelete.js";
 import { updateData } from "../Controllers/Challenges/challengeUpdate.js";
 import { putData } from "../Controllers/Challenges/challengePut.js";
 
-const router = e.Router();
+const   router = e.Router();
 
 router.get("/", getData);
 router.post("/", postData);

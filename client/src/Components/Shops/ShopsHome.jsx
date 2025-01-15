@@ -44,7 +44,6 @@ const featuredProducts = [
     description: "2kg Gourmet Vanilla Flavoured.",
     price: 39.99,
   },
-  // Add more featured products as needed
 ];
 
 const FitnessHomePage = () => {

@@ -1,138 +1,106 @@
+/* General Styles */
+:root {
+  --primary-color: #fb5607;
+  --secondary-color: #303030;
+  --background-light: #ffffff;
+  --background-dark: #f4f4f4;
+  --text-dark: #303030;
+  --border-color: #cccccc;
+}
+
 .main-challenge-section {
   margin: 0 auto;
   max-width: 90%;
-  background-color: #fbfbfb; 
+  background-color: var(--background-light);
   border-radius: 10px;
-  box-shadow: 1px 1px 4px 4px #cccccc; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2vh;
-  text-transform: uppercase;
-  color: #303030; 
+  color: var(--text-dark);
+  transition: all 0.3s ease;
 }
 
-.main-challenge-heading{ 
-  color: #fb5607;
+.main-challenge-heading {
+  color: var(--primary-color);
   font-size: 3vh;
+  font-weight: bold;
   text-align: center;
-}
-
-.main-challenge-bg {
-  background-color: #cccccc; 
-  padding: 4vh 0;
 }
 
 .main-challenge-top-bar {
   display: flex;
-  gap: 4vh;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vh;
   padding: 2vh 0;
 }
 
-.main-challenge-top-bar div {
-  display: flex;
-  gap: 1vh;
-}
-
 .main-challenge-body {
-  display: flex;
-  gap: 3vh;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.main-challenge-col-1,
-.main-challenge-col-2,
-.main-challenge-col-3,
-.main-challenge-col-4 {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2vh;
-  align-items: center;
-  text-transform: uppercase;
-  min-width: 200px;
-}
-
-.main-challenge-box {
-  background-color: #ffffff; /* White background */
-  opacity: 0.9;
-  border-radius: 10px;
-  padding: 3vh;
-  width: 250px;
-  text-align: center;
-  transition: all 0.5s;
-  cursor: pointer;
-    border: 1px solid #cccccc;
-}
-
-.main-challenge-box:hover {
-  background-color: #fb5607; 
-  color: white; 
-}
-
-.main-challenge-box > * {
-  margin-bottom: 10px;
-}
-
-.workout-log-calendar > * {
-  margin-bottom: 10px;
-}
-
-.date-input {
-  border: none;
-  background: none;
-  text-align: center;
-  font-size: 1.2em;
-  color: #303030; 
-}
-
-.to-text {
-  margin: 0 1em;
-  color: #303030;
-}
-
-.weight-change-graph {
   margin-top: 2vh;
 }
 
-.main-challenge-leaderboard {
-  background-color: #ffffff;
-  opacity: 0.9;
-  border-radius: 10px;
-  padding: 2vh;
-  width: 250px;
+/* Box Styles */
+.main-challenge-box {
+  background-color: var(--background-dark);
+  border-radius: 12px;
+  padding: 3vh;
   text-align: center;
-  border: 1px solid #cccccc;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+}
+
+.main-challenge-box:hover {
+  background-color: var(--primary-color);
+  color: var(--background-light);
+  transform: scale(1.05);
+}
+
+.workout-log-calendar h2{  
+  margin-bottom: 10px;
+}
+
+/* Date Input Styles */
+.date-input {
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.date-input:focus {
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+/* Leaderboard Styles */
+.main-challenge-leaderboard {
+  background-color: var(--background-dark);
+  border-radius: 12px;
+  padding: 2vh;
+  border: 1px solid var(--border-color);
 }
 
 .leaderboard-entry {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1vh;
-  padding: 1vh;
-  border-bottom: 1px solid #303030; 
+  padding: 1vh 0;
+  font-size: 1em;
+  transition: background-color 0.2s;
 }
 
-.leaderboard-entry:last-child {
-  border-bottom: none;
-}
-
-.leaderboard-entry span {
-  font-size: 1.2em;
-  color: #303030;
-}
-
-@media (max-width: 500px) {
+/* Media Query Improvements */
+@media (max-width: 768px) {
+  .main-challenge-section {
+    padding: 2vh 1vh;
+  }
   .main-challenge-box {
     width: 100%;
-  }
-  .main-challenge-body {
-    display: block;
-  }
-  .weight-change-graph, .workout-log-calendar {
-    text-align: center;
-  }
-  .main-challenge-col-1, .main-challenge-col-2 {
-    margin-bottom: 20px;
-  }
-  .main-challenge-section {
-    overflow-y: hidden;
   }
 }

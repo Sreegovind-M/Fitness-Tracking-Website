@@ -21,12 +21,18 @@ import { MyContext } from "../../DetailsContext/MyContext";
 
 const FitnessTracking = () => {
   const [calorie, setCalorie] = useState(0);
+  React.useEffect(() => {
+    const storedCalories = localStorage.getItem("totalCalories");
+    if (storedCalories) {
+      setCalorie(storedCalories); // Set the calorie state with the stored value
+    }
+  }, []);
   const navi = useNavigate();
   const toWorkout = () => {
     navi("/workout");
   };
-  const toDiet = () => {
-    navi("/recipe");
+  const toCalorieTracker = () => {
+    navi("/calorietracker");
   };
   const toChallenge = () => {
     navi("/challenge");
@@ -98,7 +104,8 @@ const FitnessTracking = () => {
     "November",
     "December",
   ];
-  const { weight, height, profileName, email, age } = useContext(MyContext);
+  const { profileName, email, age, weight, height, mainCalorie } =
+    useContext(MyContext);
   return (
     <div>
       <div className="fitness-tracking-section">
@@ -253,7 +260,7 @@ const FitnessTracking = () => {
             </div>
             <div className="fitness-tracking-second-box-section">
               <div className="fitness-tracking-second-left-box-section">
-                <div className="ftsl-calorie-box" onClick={toDiet}>
+                <div className="ftsl-calorie-box" onClick={toCalorieTracker}>
                   <div className="ftsl-pie-chart">
                     <h1>Calorie Tracker</h1>
                     <PieChart
@@ -274,7 +281,7 @@ const FitnessTracking = () => {
                     />
                   </div>
                   <div className="ftsl-calorie-descrip">
-                    <h3>Total Calorie: 2200 / 2700 kcl</h3>
+                    <h3>Total Calorie: 2200 / {calorie}kcl</h3>
                     <h3>Protein: 40 / 120 g</h3>
                     <h3>Carbohydrates: 120 / 170 g</h3>
                     <h3>Fats: 20 / 60 g</h3>
